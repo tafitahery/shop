@@ -43,4 +43,19 @@
     font-size: 14px;
     font-weight: 400;
   }
+
+  .prices {
+    display: flex;
+    gap: 20px;
+
+    h3 {
+      font-size: 18px;
+      font-weight: 500;
+
+      &:first-child {
+        color: gray;
+        text-decoration: line-through;
+      }
+    }
+  }
 }
