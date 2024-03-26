@@ -1,8 +1,12 @@
 .navbar {
   height: 80px;
+  display: flex;
+  align-items: center;
+  width: 100%;
 
   .wrapper {
     padding: 10px 30px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
