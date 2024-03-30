@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   KeyboardArrowDown,
   Search,
@@ -10,8 +10,11 @@ import {
 import En from "../../img/en.png";
 import { Link } from "react-router-dom";
 import "./navbar.scss";
+import Cart from "../Cart/Cart";
 
 export default function Navbar() {
+  const [open, setOpen] = useState(false);
+
   return (
     <div className="navbar">
       <div className="wrapper">
@@ -70,13 +73,14 @@ export default function Navbar() {
             <Search />
             <PersonOutlineOutlined />
             <FavoriteBorderOutlined />
-            <div className="cartIcon">
+            <div className="cartIcon" onClick={(e) => setOpen(!open)}>
               <ShoppingCartOutlined />
               <span>0</span>
             </div>
           </div>
         </div>
       </div>
+      {open && <Cart />}
     </div>
   );
 }
